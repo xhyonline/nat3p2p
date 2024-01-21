@@ -181,7 +181,7 @@ func (s *Cloud) ClientOnline(conn net.Conn, parseJSON *gjson.Json) {
 			"remote_addr": conn.RemoteAddr().String(),
 		},
 	})
-	glog.Infof("用户:%s已上线", nickname)
+	glog.Infof("用户:%s已上线 边缘节点地址为:%s", nickname, conn.RemoteAddr().String())
 }
 
 // CloudBroadcast 云端广播消息
