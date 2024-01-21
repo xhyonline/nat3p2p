@@ -181,6 +181,7 @@ func (s *Cloud) ClientOnline(conn net.Conn, parseJSON *gjson.Json) {
 			"remote_addr": conn.RemoteAddr().String(),
 		},
 	})
+	glog.Infof("用户:%s已上线", nickname)
 }
 
 // CloudBroadcast 云端广播消息
